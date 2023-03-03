@@ -3,18 +3,38 @@
 class Cliente {
     nome;
     cpf;
-    agencia;
-    saldo;
+
 }
 
-const cliente1 = new Cliente();
+class contaCorrente {
+    agencia;
+    saldo;
 
-        Cliente1.nome = "Diego";
-        Cliente1.cpf = "12366677701";
-        Cliente1.agencia = 1001;
-        Cliente1.saldo = 0; 
 
-const Cliente2Nome = "Letícia";
-const Cliente2CPF = "33312346702";
-const Cliente2Agencia = 1001;
-const Cliente2Saldo = 0; 
+//Método sacar
+    sacar(valor){
+        if(this.saldo >= valor){
+            this.saldo -= valor;
+
+
+        }
+    }
+}
+
+
+        const cliente1 = new Cliente();
+        cliente1.nome = "Diego";
+        cliente1.cpf = "12366677701";
+
+
+        const cliente2 = new Cliente();
+        cliente2.nome = "Letícia";
+        cliente2.cpf = "55366673211";
+      
+        const contaCorrennteDiego = new contaCorrente();
+        contaCorrennteDiego.saldo = 0;
+        contaCorrennteDiego.agencia = 1001;
+
+
+        console.log(cliente1);
+        console.log(cliente2); 
